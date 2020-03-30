@@ -1,2 +1,4 @@
 /.vscode/
 /mic_adm/
+**/__pycache__/ 
+!**/migrations/
