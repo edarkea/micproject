@@ -18,7 +18,10 @@
                     {% if object_list %} {% for tattoo in object_list %}
                     <div class="col-md-4">
                         <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="{{tattoo.imagen.url}}" width="348" height="348" alt="Tattoo">
+                            {% if tattoo.imagen %}
+                            <img class="card-img-top" src="{{tattoo.imagen.url}}" width="348" height="348" alt="Tattoo"> {% else %}
+                            <h4>No hay ninguna imagen</h4>
+                            {% endif %}
                             <div class="card-body">
                                 <p class="card-text">{{tattoo.descripcion}} <br> <b>Precio</b>: ${{tattoo.precio}}</p>
                                 <div class="d-flex justify-content-between align-items-center">
