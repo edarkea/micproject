@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tattos</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="{% static 'vanillabox/theme/bitter/vanillabox.css' %}">
+</head>
+
+<body>
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    {% if object_list %} {% for tattoo in object_list %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow">
+                            {% if tattoo.imagen %}
+                            <img class="card-img-top" src="{{tattoo.imagen.url}}" width="348" height="348" alt="Tattoo"> {% else %}
+                            <h4>No hay ninguna imagen</h4>
+                            {% endif %}
+                            <div class="card-body">
+                                <p class="card-text">{{tattoo.descripcion}} <br> <b>Precio</b>: ${{tattoo.precio}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %} {% else %}
+                    <h1>No hay registros de Tattoos</h1>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="{% static 'js/bootstrap.min.js' %} "></script>
+</body>
+
+</html>
