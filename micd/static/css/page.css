@@ -1,0 +1,51 @@
+.bg-page {
+    background-color: black !important;
+}
+
+.fc-word {
+    color: #026E78 !important;
+    font-size: 127%;
+}
+
+.fc-home {
+    color: #026E78 !important;
+    font-size: 160%;
+}
+
+a:hover {
+    text-decoration: underline !important;
+    color: gray !important;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.jumbotron-heading {
+    color: black !important;
+}
+
+.carousel {
+    background: black;
+    margin-top: 20px;
+}
+
+.carousel-item {
+    text-align: center;
+    min-height: 280px;
+    /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+
+.bs-example {
+    margin: 20px;
+}
+
+.bg-card {
+    background-color: #A5A4A4;
+}
