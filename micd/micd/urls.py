@@ -22,5 +22,6 @@ from micd import settings
 urlpatterns = [
     path('', include('micd.apps.index.urls')),
     path('tattoo/', include('micd.apps.tattoo.urls')),
+    path('cita/', include('micd.apps.cita.urls')),
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
