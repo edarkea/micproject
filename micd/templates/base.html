@@ -45,12 +45,18 @@
                     <a class="nav-link enable fc-word" href="#foot"><b>Contacto</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link enable fc-word" href="#"><b>Programar una cita</b></a>
+                    <a class="nav-link enable fc-word" href="{% url 'create_cita' %}"><b>Programar una cita</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable fc-word" href="{% url 'create_tattoo' %}"><b>Tattoo</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link enable fc-word" href="{% url 'comment_tattoo' 0 %}"><b>Comentarios</b></a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Buscar" size="50px">
-                <button class="btn fc-word"><i class="fa fa-search"></i></button>
+            <form method="get" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." size="50px" name="buscar">
+                <button type="submit" class="btn fc-word"><i class="fa fa-search"></i></button>
             </form>
         </div>
     </nav>

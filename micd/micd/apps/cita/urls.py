@@ -1,6 +1,6 @@
 from django.urls import path
-from micd.apps.cita.views import cita_form
+from micd.apps.cita.forms import ContactForm
 
 urlpatterns = [
-    path('add', cita_form, name='create_cita'),
+    path('add', ContactForm, name='create_cita'),
 ]
